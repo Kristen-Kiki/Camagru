@@ -65,18 +65,17 @@
 
 <!-- CAMERA -->
     <div class="booth">
-        <video id="video" width="500" height="400"> </video>
-    </div>
-    
-    <div>
-         <a href="#" id="capture" class="booth_capture_btn">CAPTURE</a> <!-- button to take picture -->
+        <video id="videoElement" width="500" height="400" autoplay> </video>
+        <a href="#" id="capture" class="booth_capture_btn">CAPTURE</a> <!-- button to take picture -->
     </div>
 
     <div class="booth">
         <canvas id="canvas" width="500" height="400"> </canvas> <!-- camera copies image taken -->
-        <img id="photo" src="./img/picklerick.jpeg" width="500" height="400" alt="Sample Image"/> <!-- palceholder for when user wants to save an image-->
+        <img id="photo" src="./img/picklerick.jpeg" width="480" height="400" alt="Sample Image"/> <!-- palceholder for when user wants to save an image-->
     </div>
+
     <script src="./js/camera.js"></script>
+ 
 
  </BODY>
 </HTML>
