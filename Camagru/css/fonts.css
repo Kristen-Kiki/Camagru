@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+h1
+{
+    font-family: "Atma 500", cursive, sans-serif;
+    font-weight: bolder;
+    font-optical-sizing: auto;
+    overflow: fixed;
+    font-size: 90px;
+    color: rgb(15, 22, 54);
+    padding-top: none;
+    padding-bottom: none;
+    text-align-last: center;
+    letter-spacing: 22px;    
+}
+
+h2
+{ 
+    font-family: "Josefin Sans 300", cursive, sans-serif;
+    font-weight: bolder;
+    font-optical-sizing: auto;
+    overflow: fixed;
+    font-size: 25px;
+    color: rgb(15, 22, 54);
+    padding: none;
+    text-align-last: center;
+    letter-spacing: 7px;
+}
+
+h3
+{
+    padding-top: 0;
+    font-family: "Josefin Sans 300", cursive, sans-serif;
+    font-weight: bolder;
+    font-optical-sizing: auto;
+    overflow: fixed;
+    font-size: 40px;
+    color: rgb(15, 22, 54);
+    text-align-last: center;
+    letter-spacing: 7px;
+}
+

@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+body
+{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    overflow-x: hidden;     
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+section
+{
+    display: -webkit-flex;
+    display: flex;
+}
+
+nav
+{
+    -webkit-flex: 1;
+    -ms-flex: 1; 
+    flex: 1;
+}
+
+article
+{
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    font-size: 30px;
+}
+header
+{
+    position: top;
+    padding-top: 0;
+    background-color: none;
+    text-align: center;
+    font-size: 90px;
+    color: rgb(15, 22, 54);
+    letter-spacing: 22px;
+    text-decoration-style: italic;
+}
+
+footer 
+{
+    background-color: rgb(179, 179, 179);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px)
+{
+    section
+    {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.nav /*navigation pane setup */
+{
+    display: hidden;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.8;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.7s;
+}
+
+.nav a /* navigation pane links setups */ 
+{
+    display: block;
+    padding: 20px 35px;
+    font-size: 25px;
+    text-decoration: none;
+    color: darkgreen;
+    transition: 0.3s;
+    font-style: inherit;
+}
+
+.nav a:hover
+{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-emphasis-style: inherit;
+    text-decoration: lawngreen;
+    color: rgb(62, 236, 27);
+    transition: 0.4s;
+    font-size: 35px;
+    overflow-x: hidden;
+}
+
+.nav .closebtn
+{
+    overflow-x: visible;
+    display: block;
+    position: absolute;
+    padding-top: 0;
+    top: 0;
+    right: 30px;
+    margin-left: 50px;
+    font-size: 65px;
+    color: red;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav .logoutbtn
+{
+    overflow-x: visible;
+    display: block;
+    position: absolute;
+    padding-bottom: 0;
+    bottom: 20px;
+    right: 30px;
+    margin-left: 50px;
+    font-size: 65px;
+    color: red;
+    -webkit-overflow-scrolling: touch;
+}
+.nav .closebtn:hover
+{
+    text-decoration-style: solid;
+    color: red;
+    transition: 0.4s;
+    font-size: 75px;
+}
+
+#menu
+{
+    font-size: 45px;
+    cursor: pointer;
+    padding: 15px;
+    transition: margin-left 0.7s;
+    overflow: hidden;
+    width: 0;
+    margin-left: 0;
+
+}
+
+#opennav
+{
+    padding: 30px;
+    margin: 30px 2;
+    font-size: 50px;
+    cursor: pointer;
+    overflow: fixed;
+    color: rgb(15, 22, 54);
+    opacity: 9px;
+    width: 0;
+    
+}

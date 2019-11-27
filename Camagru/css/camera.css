@@ -1,0 +1,28 @@
+.booth
+{
+    width: 550px;
+    background-color: #ccc;
+    border: 10px solid #ddd;
+    margin: 0 auto;
+}
+
+.booth_flip
+{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.booth_capture_btn
+{
+    font-family: "Josefin Sans 300", cursive, sans-serif;
+    width: 530px;
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color:rgb(80, 215, 87);
+    color:  #000;
+    text-align: center;
+    text-decoration: none;
+    box-align: center;
+    font-size: 30px;
+} 
