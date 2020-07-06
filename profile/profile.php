@@ -58,7 +58,7 @@
             <!-- <a href="./registration/signup.php"> <b> Access our Universe </b> </a> -->
             <a href="../profile/profile.php"> <b> Account </b> </a>
             <a href="../gallery/camera.php"> <b> Editor </b> </a>
-            <a href="../gallery/gallery.php"> <b> update  </b> </a> 
+            <a href="../gallery/gallery.php"> <b> Gallery  </b> </a> 
             <a href="../registration/logout.php"> <b> Logout </b> </a> 
         </div>
     </nav>
@@ -68,24 +68,24 @@
  <h3>Your Whole Life In Front of You!</h3>
     <hr width="75%">
 
-    <!-- VIEW_INFO
+<!-- VIEW_INFO -->
     <div class="loginbooth">
-        <form action="./update_info.php" method="post" align="center">
-            <button type="submit" class="button button1" name="change"> I Changed My Identity </button>
-        </form>
-    </div> <br/> -->
-
-    <!-- UPDATE_INFO -->
-    <div class="loginbooth">
-        <form action="./update_info.php" method="post" align="center">
-            <button type="submit" class="button button1" name="change_info"> I Changed My Identity </button>
+        <form action="./info.php" method="get" align="center">
+            <button type="submit" class="button button1" name="change"> My Passport </button>
         </form>
     </div> <br/>
 
-    <!-- UPDATE_PASSWORD -->
+ <!-- UPDATE_INFO -->
+    <div class="loginbooth">
+        <form action="./update_info.php" method="post" align="center">
+            <button type="submit" class="button button1" name="change_info"> Change My Identity </button>
+        </form>
+    </div> <br/>
+
+ <!-- UPDATE_PASSWORD -->
     <div class="loginbooth">
         <form action="./pwd_reset.php" method="post" align="center">
-            <button type="submit" class="button button1" name="change_pwd"> Need a New Access Code </button>
+            <button type="submit" class="button button1" name="change_pwd"> New Access Code </button>
         </form>
     </div>
 
