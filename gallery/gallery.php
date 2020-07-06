@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../css/nav.css">
 <!-- FONT-LINKS-->
     <link rel="stylesheet" href="../css/fonts.css">
+<!-- GALLERY_LINKS -->
+    <link rel="stylesheet" href="../css/gallery.css">
 
 <!-- NAV_FUNC-->
     <script>
@@ -70,19 +72,79 @@
     <hr width="75%">
 </div>
 
-    <?php
-			if ($_SESSION['Email_Confirmation'] == '0')
-			{
-                echo "You account needs to be verified to use the editor";
-				echo "Please verify your account and try again";
-                header('refresh:5; url="signup.php"');
-            }
+    <!-- <?php
+			// if ($_SESSION['Email_Confirmation'] == '0')
+			// {
+            //     echo "You account needs to be verified to use the editor";
+			// 	echo "Please verify your account and try again";
+            //     header('refresh:5; url="signup.php"');
+            // }
             
-			else  
-			{
-				$images = get_imgs();
-			}
+			// else  
+			// {
+			// 	$images = get_imgs();
+			// }
+        ?> -->
+
+<!-- IMAGE_DISPALY -->    
+    <div id="image_display">
+        <?php
+            
+            session_start();
+
+            try
+            {
+                $stmt = $db_connect->query("SELECT * FROM Images");
+
+                while ($row = $stmt->fetch())
+                {
+                    $newDate = date_format(date_create($row['reg_date']), 'D d M Y');
+
+                    $id = $row['id'];
+
+                    $figure = "<figure>";
+
+                    $caption = "<figcation> 
+                                <h4>".$row['UserID']."</h4>
+                                <p>".$newDate."</p>"
+                                .htmlspecialchars($row['img_title']).
+                                "</figcaption>";
+
+                    $imgage = "<img class=\"images\" name=\"".$row['img_title'].
+                                "\" id=\"".$row['id'].
+                                "\"src=\"".$row['img_base64'].
+                                "\" width=\"30%\">";
+
+                    $form = "<form name=\"".$row['reg_date']."\" action=\"like.php\" method=\"POST\">
+                            <input type=\"hidden\" name=\"page\" value=\"gallery\">
+                            <input type=\"hidden\" name=\"hidden\" value=\"".$row['id']."\">
+                            <input type=\"submit\" name=\"btn\" value=\"likes : ".$row['likes']."\">
+                            </form>";
+
+                    $comment = "<form action=\"../forms/comment.php\" method=\"POST\">
+                            <input type=\"text\" name=\"com\" value=\"\" required/>
+                            <input type=\"hidden\" name=\"hidden_txt\" value=\"\".$reg_date.\"\">
+                            <input type=\"hidden\" name=\"id\" value=\"\".$id.\"\">
+                            <button type=\"submit\" class=\"button button1\"> Comment </button>
+                            </form>";
+
+                    $delete = "<form name=\"".$row['reg_date']."\"action=\"del_image.php\" method=\"POST\">
+                            <input type=\"hidden\" name=\"page\" value=\"\">
+                            <input type=\"hidden\" name=\"hidden\" value=\"".$row['id']."\">
+                            <input type=\"submit\" name=\"btn\" value=\"Delete Image\">
+                            </form>";
+
+                    $figure2 = "</figure>";
+
+
+                    echo $figure.$caption.$imgage.$form.$comment.$delete.$figure2;
+                }
+            }
+            catch(PDOException $e){
+                echo $db_connnect . "<br>" . $e->getMessage();
+            }
         ?>
+    </div>
 
  </BODY>
 </HTML>
@@ -92,3 +154,4 @@
     require "../footer.php"
 
 ?>
+
