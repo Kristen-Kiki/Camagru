@@ -40,3 +40,15 @@ h3
     letter-spacing: 7px;
 }
 
+h4
+{
+    padding-top: 0;
+    font-family: "Josefin Sans 300", cursive, sans-serif;
+    font-weight: bolder;
+    font-optical-sizing: auto;
+    overflow: fixed;
+    font-size: 25px;
+    color: white;
+    text-align-last: center;
+    letter-spacing: 7px;
+}
