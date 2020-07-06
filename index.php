@@ -59,8 +59,9 @@ session_start();
         <div id="menu" class="nav"> 
             <a href="#" class="closebtn" onclick="closeNav()" hidden> &times; </a> 
             <br>
-            <a href="./registration/login.php"> <b> Welcome Back </b> </a>
             <a href="./registration/signup.php"> <b> Access our Universe </b> </a>
+            <a href="./registration/login.php"> <b> Welcome Back </b> </a>
+            <a href="./gallery/gallery.php"> <b> Just Visiting </b> </a> 
             <!-- <a href="./profile/profile.php"> <b> Your Account </b> </a> -->
             <!-- <a href="./gallery/camera.php"> <b> Editor </b> </a> -->
             <a href="./gallery/gallery.php"> <b> Gallery </b> </a> 
