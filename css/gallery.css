@@ -1,0 +1,76 @@
+#image_display
+{
+    background: linear-gradient(transparent, rgb(245, 246, 247))100% 50%;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    color: rgb(15, 22, 54);
+    height: 100vmin;
+    overflow: auto;
+    border: solid rgb(15, 22, 54);
+    border-radius: vmin;
+}
+
+.images
+{
+    border: solid rgb(15, 22, 54);
+    width: 50%;
+}
+
+.filter
+{
+    width: 40%;
+    height: 50vmin;
+    border-radius: 1vmin;
+    border: solid white;
+    margin: auto;
+    overflow: auto;
+    background-color: gray;
+}
+
+.stickers{
+    width: 50%;
+}
+
+.filter button {
+    border: none;
+    background: none;
+    background:
+}
+
+#stk {
+    width: 15%;
+    height: 50vmin;
+    position: absolute;
+    top: 22%;
+    left: 2.5%;
+    border: solid wheat;
+}
+
+#sticker {
+    overflow: auto;
+    height: 50vmin;
+    width: 100%;
+    background-color: purple;
+}
+
+#sticker img {
+    height: 10vmin;
+    width: 80%;
+}
+
+#sticker button {
+    background-color: purple;
+    border-radius: 0vmin;
+    border: none;
+    color: wheat;
+}
+
+#stickers {
+    position: absolute;
+    top: 6%;
+    right: 36%;
+    /* background-color: rgba(221, 221, 221, 0.3); */
+    width: 39%;
+  }
