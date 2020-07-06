@@ -44,7 +44,9 @@
 
 <div>
     <?php
+    require '../config/database.php';
         session_start();
+        $username = ($_SESSION['username']);
     ?>
 </div>
 
@@ -56,20 +58,20 @@
 <br/>  <br/>
 <!-- FORM TO CHANGE CREDENTIALS -->
 <div class="loginbooth">    
-        <form  method="POST" action="./info.php" align="center">
-            <label for="username">I want to be known as...</label> <br/>
+        <form  method="POST" action="..forms/form_change_info.php" align="center">
+            <label for="username">I want to be known as <?php echo $username ?></label> <br/>
                 <input type="text" name="username" placeholder="New Username" required>
         <br/>
-            <label for="email">  I change my E-mail address to...  </label> <br/>
+            <label for="email">  I changed my E-mail address to...  </label> <br/>
                 <input type="email" name="email" placeholder="New E-mail" required>
         <br/> 
-            <label for="FirstName"> I changed my Identity... My new firstname is...  </label> <br/>
+            <label for="FirstName"> I changed my Identity... My new name is...  </label> <br/>
                 <input type="text" name="FirstName" placeholder="New Firstname" required>
         <br/> 
-            <label for="lastname">  I am reborn... (or got married)... My new lastname is...</label> <br/>
+            <label for="lastname">  I am reborn... (or got married)... My new surname is...</label> <br/>
                 <input type="text" name="lastname" placeholder="New Surname " required>
         <br/> 
-        <button type="submit" class="button button1" name="change_info"> Update Details! </button>
+        <button  name="change_info"> Update Details! </button>
         
         <!-- <div class="upd-div"><button type="submit" name="change" value="Update my details"></div> -->
         </form>
@@ -79,5 +81,6 @@
 </html>
 
 <?php
-    require "./footer.php"
+    require "../footer.php"
 ?>
+ 
