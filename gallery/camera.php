@@ -65,6 +65,15 @@
 <h3> Let's Get Schwifty! <h3>
 </header>
 
+
+<div class="">
+    <button onclick="add_filters(0);"><img class="stickers" src="../filters/crown.png" width="200" height="200" alt="crown"></button>
+    <button onclick="add_filters(1);"><img class="stickers" src="../filters/beard.png" width="200" height="200" alt="beard"></button>
+    <!-- <button onclick="add_filters(2);"><img class="stickers" src="../filters/rick_and_morty_emoji_face.png" alt="uni"></button> -->
+  
+</div>
+
+
 <!-- CAMERA -->
     <div class="booth"><!-- button to take picture -->
         <video id="videoElement" class="booth_flip" width="530" height="410" autoplay> </video>
@@ -76,12 +85,12 @@
         <!-- <img id="photo" src="../images/picklerick.jpeg" width="530" height="410" alt="Sample Image"/> -->
     </div>
     
-    <div>
+    <div class="booth">
         <form action="../gallery/save_image.php" method="POST">
             <button type="submit" id="upload" class="booth_capture_btn" name="Save"> Save Image </button>
         </form>
     </div>
-    <script src="../js/camera.js"></script>
+    <script async src="../js/camera.js"></script>
   
  </BODY>
 </HTML>
