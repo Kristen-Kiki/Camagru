@@ -29,12 +29,18 @@
                     $header = 'Saving your picture to the Camagru Database';
                     $message = 'Your image has been successfully uploaded to our database!';
                     mail("$email", "$header", "$message");
-                    echo "Your Image has been uploaded to our database!";
-                    header('refresh:3; url="./gallery.php"');
+                    echo "<br> Your Image has been uploaded to our database!";
+                    // header('refresh:3; url="../gallery/gallery.php"');
+                    header('refresh:3 url="../gallery/gallery.php"');
+                    exit();
                 }
-        }
+            }
+        
+
         catch(PDOException $e)
-        {
+        {   
             echo $db_connnect . "<br>" . $e->getMessage();
+            header('refresh:3 url="../gallery/gallery.php"');
+                    exit();
         }
 ?>
