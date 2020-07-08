@@ -71,7 +71,7 @@
     <div class="loginbooth">
         <form action="../forms/form_login.php" method="post" align="center">
             <label for="username"> Alias: </label> <br/>
-                <input type="text" name="username" placeholder="Username - Kiki" required> <br/>
+                <input type="text" name="username" placeholder="Username" required> <br/>
             <label for="password"> Access Code: </label> <br/>
                 <input type="password" name="password" placeholder="Password" required> <br/>
             <button type="submit" class="button button1" name="login"> Login </button>

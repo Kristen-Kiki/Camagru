@@ -1,34 +1,3 @@
-
-<?php
-    require '../config/database.php';
-    
-    if(isset($_POST['verify']))
-    {
-        $email = trim($_POST['email']);
-        $sql = $db_connect->prepare("UPDATE `Users` WHERE email='$email'");
-        $sql->execute();
-        
-        echo 'Account Successfully Confirmed!';
-        
-        $stmt = $db_connect->prepare($sql);
-        $sql = "UPDATE 'Users' SET 'Email_Confirmation' = 1 WHERE 'Verification_Code' = ?";
-        $stmt->bindParam(1, $_GET['Verification_Code']);
-        
-        if ($stmt->execute())
-        {
-            echo "Verified Successfully!";
-            header('refresh:5; url="login.php"');
-            exit();
-        }
-        else
-        {
-            echo "Verification Failed! Try to signup again!";
-            header('refresh:5; url="signup.php"');
-            exit();
-        }
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +52,7 @@
     <hr width="75%">
 
     <div class="loginbooth2">
-        <form action="../registration/login.php" method="post" align="center">
+        <form action="../forms/form_verify_acc.php" method="post" align="center">
             <input type="email" name="email" Placeholder="Insert your email address here to verify your account!" required>
             <button type="submit" class="button button1" name="verify"> YES, ITS ME! </button>
         </form>

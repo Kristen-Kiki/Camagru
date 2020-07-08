@@ -6,15 +6,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- CAMERA_LINKS -->
-    <link rel="stylesheet" href="../css/camera.css">
 <!-- NAV_LINKS -->
-    <link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/nav.css">
 <!-- FONT-LINKS-->
     <link rel="stylesheet" href="../css/fonts.css">
 <!-- FORM-LINKS-->
-    <link rel="stylesheet" href="../css/form.css">  
-
+    <link rel="stylesheet" href="../css/form.css">
 
 <!-- NAV_FUNC-->
     <script>
@@ -24,26 +21,24 @@
             document.getElementById('opennav').style.width='250px';
         }
 
-        function closeNav()
+        function closeNav() 
         {
             document.getElementById('menu').style.width='0px';
             document.getElementById('opennav').style.width='0px';
             
         }
-    </script> <!-- END_nav_system -->
+    </script> <!-- END_NAV_FUNC -->
 
 <!-- BG_IMG -->
     <style>
         body
         {
-            background-image: url("../images/alaska.jpg");
+            background-image: url("../images/skagway.jpg");
             background-color: #000;
             background-repeat: no-repeat;
             background-size: cover; 
-            opacity: 6px;
         }
     </style>
-
 </HEAD>
 <BODY>
 <section> 
@@ -65,7 +60,7 @@
  </section>
 
 <!-- CHANGE_PROFILE -->
- <h3>Your Whole Life In Front of You!</h3>
+ <h3>Your Life In Front of You!</h3>
     <hr width="75%">
 
 <!-- VIEW_INFO -->

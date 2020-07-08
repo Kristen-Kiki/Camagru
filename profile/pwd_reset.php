@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    
-<!-- CAMERA_LINKS -->
-    <link rel="stylesheet" href="../css/camera.css">
 <!-- NAV_LINKS -->
-    <link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/nav.css">
 <!-- FONT-LINKS-->
     <link rel="stylesheet" href="../css/fonts.css">
 <!-- FORM-LINKS-->
-    <link rel="stylesheet" href="../css/form.css">  
+    <link rel="stylesheet" href="../css/form.css">
 
 <!-- NAV_FUNC-->
     <script>
@@ -23,27 +21,25 @@
             document.getElementById('opennav').style.width='250px';
         }
 
-        function closeNav()
+        function closeNav() 
         {
             document.getElementById('menu').style.width='0px';
             document.getElementById('opennav').style.width='0px';
             
         }
-    </script> <!-- END_nav_system -->
+    </script> <!-- END_NAV_FUNC -->
 
 <!-- BG_IMG -->
     <style>
         body
         {
-            background-image: url("../images/alaska.jpg");
+            background-image: url("../images/skagway.jpg");
             background-color: #000;
             background-repeat: no-repeat;
             background-size: cover; 
-            opacity: 6px;
         }
     </style>
 
-</HEAD>
 </head>
 <body>
 <!-- NAV_SYSTEN -->
@@ -70,7 +66,7 @@
     <h3>Change your Access Code!</h3>
         <hr width="75%">
 
-        <div class="loginbooth2">
+        <div class="loginbooth">
             <form action="../forms/form_pwd_reset.php" method="post" align="center">
                 <label for="username"><b>Alias</b></label> <br/>
                     <input type="text" placeholder="Username" name="username" required><br/>
