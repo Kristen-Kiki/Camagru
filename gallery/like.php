@@ -12,28 +12,17 @@ else
     try
     {
         $stmt = $db_connect->query('SELECT * FROM Images');
-        $id = $_POST['hidden'];
+        $ImageID = $_POST['hidden'];
 
         while ($row = $stmt->fetch())
         {
-            if ($row['id'] == $id)
+            if ($row['ImageID'] == $ImageID)
             {
                 $likes = intval($row['likes']) + 1;
-                $database = "UPDATE Images SET likes='$likes' WHERE id='$id'";
+                $database = "UPDATE Images SET likes='$likes' WHERE ImageID='$ImageID'";
                 $stmt = $db_connect->prepare($database);
                 $stmt->execute();
 
-                if ($_POST['page'] === 'gallery')
-                    header('Location: ../gallery/gallery.php');
-
-                else if ($_POST['page'] === 'profile')
-                    header('Location: ../profile/profile.php');
-
-                else if ($_POST['page'] === 'comment')
-                {
-                    $li = "http://localhost:8080/gallery/comment.php?reg_date=".$row['reg_date'];
-                        header('Location: '.$li);
-                }
             }
         }
     }

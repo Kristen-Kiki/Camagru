@@ -87,8 +87,8 @@
 <script async src="../js/camera.js"></script>
 
 <div class="">
-    <button onclick="add_filters(0);"><img class="stickers" src="../filters/crown.png" width="200" height="200" alt="crown"></button>
-    <button onclick="add_filters(1);"><img class="stickers" src="../filters/beard.png" width="200" height="200" alt="beard"></button>
+    <button onclick="add_filters(0);"><img class="stickers" src="../filters/crown.png" width="100" height="100" alt="crown"></button>
+    <button onclick="add_filters(1);"><img class="stickers" src="../filters/beard.png" width="100" height="100" alt="beard"></button>
     <!-- <button onclick="add_filters(2);"><img class="stickers" src="../filters/rick_and_morty_emoji_face.png" alt="uni"></button> -->
   
 </div>

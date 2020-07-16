@@ -9,25 +9,23 @@
 
     else{
         $reg_date = $_GET['reg_date'];
-        $id = $_SESSION['login'];
+        $CommentID = $_SESSION['login'];
         $stmt = $db_connect->query('SELECT * FROM Comments');
 
         while ($row = $stmt->fetch())
         {
-            if ($row['reg_date'] == $reg_date)
+            if ($row['reg_date'] == $reg_date) 
             {
                 $gallery = "<div id=\"nav\">
                             <a href=\"Gallery.php\">
-                            <div id=\"nav-content1\">
-                            <button id=\"nav-content\">Back to Gallery</button>
+                            <div>
                             </div></a></div>";
 
-                $newDate = date_format(date_create($row['reg_date']), 'D d M Y');
+                $newDate = date_format(date_create($row['reg_date']), 'D D M Y');
 
                 $figure = "<figure>";
 
-                $caption = "<figcation> <h3>".$newd." by ".$row['userid']."</h3>
-                            <p>".$row['img_title']."</p>
+                $caption = "<figcation> <h3>".$newDate." by ".$row['UserID']."</h3>
                             </figcaption>";
 
                 $imgage = "<img class=\"images\" name=\"".$row['img_title']."\" id=\"".$row['reg_date']." 

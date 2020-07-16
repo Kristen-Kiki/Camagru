@@ -22,8 +22,8 @@
                 }
                 if ($e == 1)
                 {
-                    $sql = "INSERT INTO Images (UserID, username, img_base64, likes) 
-                            VALUES ('$user','$name','$picture','0')";
+                    $sql = "INSERT INTO Images (UserID, username, img_base64, img_title, likes) 
+                            VALUES ('$user','$name','$picture', '$ImageID','0')";
                     $db_connect->exec($sql);
                     // echo "something here";
                     $header = 'Saving your picture to the Camagru Database';

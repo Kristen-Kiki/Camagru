@@ -68,7 +68,7 @@
     </nav>
  </section>
 <div>
-    <h3> Nobody exists on Purpose! <h3>
+    <h3> Hmmm! Who be this? <h3>
     <hr width="75%">
 </div>
 
@@ -131,7 +131,7 @@
                     $delete = "<form name=\"".$row['reg_date']."\"action=\"del_image.php\" method=\"POST\">
                             <input type=\"hidden\" name=\"page\" value=\"\">
                             <input type=\"hidden\" name=\"hidden\" value=\"".$row['id']."\">
-                            <input type=\"submit\" name=\"btn\" value=\"Delete Image\">
+                            <input type=\"submit\" name=\"btn\" value=\" Delete Image\">
                             </form>";
 
                     $figure2 = "</figure>";
@@ -154,8 +154,3 @@
     require "../footer.php"
 
 ?>
-
-
-
-
-514023

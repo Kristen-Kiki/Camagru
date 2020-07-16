@@ -2,7 +2,7 @@
 <?php
     require '../config/database.php';
 
-    $capture_date = $_GET['reg_date'];
+    $pic = $_GET['ImageID'];
     
     try
     {
@@ -10,7 +10,7 @@
         session_start();
 
         $UserID = $_SESSION['login'];
-        $delete_image = "DELETE FROM Images WHERE reg_date='$capture_date' AND UserID='$UserID'";
+        $delete_image = "DELETE FROM Images WHERE ImageiD='$pic' LIMIT 1";
         $db_connect->exec($delete_image);
         
         echo "Image has been deleted";
