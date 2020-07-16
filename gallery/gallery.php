@@ -98,39 +98,39 @@
 
                 while ($row = $stmt->fetch())
                 {
-                    $newDate = date_format(date_create($row['reg_date']), 'D d M Y');
+                    $reg_date = $row['reg_date'];
 
-                    $id = $row['id'];
-
+                    $ImageID = $row['ImageID'];
+                    
                     $figure = "<figure>";
 
                     $caption = "<figcation> 
                                 <h4>".$row['UserID']."</h4>
-                                <p>".$newDate."</p>"
+                                <p>".$reg_date."</p>"
                                 .htmlspecialchars($row['img_title']).
                                 "</figcaption>";
 
                     $imgage = "<img class=\"images\" name=\"".$row['img_title'].
-                                "\" id=\"".$row['id'].
+                                "\" ImageID=\"".$row['ImageID'].
                                 "\"src=\"".$row['img_base64'].
                                 "\" width=\"30%\">";
 
                     $form = "<form name=\"".$row['reg_date']."\" action=\"like.php\" method=\"POST\">
                             <input type=\"hidden\" name=\"page\" value=\"gallery\">
-                            <input type=\"hidden\" name=\"hidden\" value=\"".$row['id']."\">
+                            <input type=\"hidden\" name=\"hidden\" value=\"".$row['ImageID']."\">
                             <input type=\"submit\" name=\"btn\" value=\"likes : ".$row['likes']."\">
                             </form>";
 
                     $comment = "<form action=\"../forms/comment.php\" method=\"POST\">
                             <input type=\"text\" name=\"com\" value=\"\" required/>
                             <input type=\"hidden\" name=\"hidden_txt\" value=\"\".$reg_date.\"\">
-                            <input type=\"hidden\" name=\"id\" value=\"\".$id.\"\">
+                            <input type=\"hidden\" name=\"id\" value=\"\".$ImageID.\"\">
                             <button type=\"submit\" class=\"button button1\"> Comment </button>
                             </form>";
 
                     $delete = "<form name=\"".$row['reg_date']."\"action=\"del_image.php\" method=\"POST\">
                             <input type=\"hidden\" name=\"page\" value=\"\">
-                            <input type=\"hidden\" name=\"hidden\" value=\"".$row['id']."\">
+                            <input type=\"hidden\" name=\"hidden\" value=\"".$row['ImageID']."\">
                             <input type=\"submit\" name=\"btn\" value=\" Delete Image\">
                             </form>";
 
